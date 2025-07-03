@@ -58,6 +58,7 @@ dim_airports: (stretch goal) Dimension table joining airport metadata
 ✅ Testing (dbt)
 
 dbt test
+
 Tests include:
 
 Not null constraints
