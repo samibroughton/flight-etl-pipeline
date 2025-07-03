@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: fct_active_flights
+    columns:
+      - name: num_active_flights
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 5000

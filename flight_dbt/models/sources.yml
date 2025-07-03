@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw
+    database: flightdata
+    schema: public  # <- not analytics
+    tables:
+      - name: raw_flights
+

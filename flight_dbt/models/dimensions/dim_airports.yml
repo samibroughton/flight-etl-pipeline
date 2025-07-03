@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: dim_airports
+    description: "One row per callsign based on latest last_contact"
+    columns:
+      - name: callsign
+        tests:
+          - not_null
+          - unique

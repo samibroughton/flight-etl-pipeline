@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_flights
+    columns:
+      - name: longitude
+        tests:
+          - not_null
+      - name: latitude
+        tests:
+          - not_null
+
