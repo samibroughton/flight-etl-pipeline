@@ -39,31 +39,38 @@ cd flight-etl-pipeline
 ```
 
 ## Start the environment:
+``` bash
 docker-compose up -d
-Install Python dependencies:
+```
+**Install Python dependencies**:
+``` bash
 pip install -r requirements.txt
-
-## Run the ETL pipeline:
+```
+**Run the ETL pipeline**:
+``` bash
 python main_etl.py
-
-## Run dbt models:
+```
+**Run dbt models**:
+``` bash
 cd flight_dbt
 dbt run
+```
 
 ## 📊 Models Included
 
-stg_flights: Staged source of raw flight data
-fct_active_flights: Fact table tracking daily flight volume
-dim_airports: (stretch goal) Dimension table joining airport metadata
-✅ Testing (dbt)
+- stg_flights: Staged source of raw flight data
+- fct_active_flights: Fact table tracking daily flight volume
+- dim_airports: (stretch goal) Dimension table joining airport metadata
 
+## ✅ Testing (dbt)
+``` bash
 dbt test
-
+```
 Tests include:
 
-Not null constraints
-Accepted value ranges
-Custom expectation logic
+- Not null constraints
+- Accepted value ranges
+- Custom expectation logic
 
 ## ✨ Why This Matters
 
